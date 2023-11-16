@@ -24,6 +24,7 @@ public class DigitalVideoDisc {
         this.title = title;
         this.category = category;
         this.cost = cost;
+        updateDiscCountAndId();
     }
 
 
@@ -34,6 +35,7 @@ public class DigitalVideoDisc {
         this.category = category;
         this.director = director;
         this.cost = cost;
+        updateDiscCountAndId();
     }
 
 
@@ -44,6 +46,7 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+        updateDiscCountAndId();
     }
 
 
@@ -107,11 +110,11 @@ public class DigitalVideoDisc {
     }
 
     // ham in ra thong tin dia
+    @Override
     public String toString() {
-        return "Title: " + title + ", Cost: $" + cost;
+        return "ID: " + id + ", Title: " + title + ", Cost: $" + cost;
     }
 
-    // // Test method for part 5 of this lab
 
     // public static void main(String[] args) {
     //     // Create instances of DigitalVideoDisc to test the new attributes
