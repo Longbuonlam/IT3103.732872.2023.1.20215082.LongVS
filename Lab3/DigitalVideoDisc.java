@@ -1,120 +1,127 @@
 package Lab3;
 
+
 public class DigitalVideoDisc {
-	private static int nbDigitalVideoDiscs = 0;
+    private static int nbDigitalVideoDiscs = 0;
 
-	private String title;
-	private String category;
-	private String director;
-	private int length;
-	private float cost;
-	private int id;
-	
-	
-	public DigitalVideoDisc(String title) {
-		super();
-		this.title = title;
-		updateDiscCountAndId();
-	}
-	
-	
-	public DigitalVideoDisc(String title, String category, float cost) {
-		super();
-		this.title = title;
-		this.category = category;
-		this.cost = cost;
-	}
-
-	
-
-	public DigitalVideoDisc(String title, String category, String director, float cost) {
-		super();
-		this.title = title;
-		this.category = category;
-		this.director = director;
-		this.cost = cost;
-	}
-
-	
-	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
-		super();
-		this.title = title;
-		this.category = category;
-		this.director = director;
-		this.length = length;
-		this.cost = cost;
-	}
-	
-	
-	
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    private String title;
+    private String category;
+    private String director;
+    private int length;
+    private float cost;
+    private int id;
 
 
-	public void setCategory(String category) {
-		this.category = category;
-	}
+    public DigitalVideoDisc(String title) {
+        super();
+        this.title = title;
+        updateDiscCountAndId();
+    }
 
 
-	public void setDirector(String director) {
-		this.director = director;
-	}
+    public DigitalVideoDisc(String title, String category, float cost) {
+        super();
+        this.title = title;
+        this.category = category;
+        this.cost = cost;
+    }
 
 
-	public void setLength(int length) {
-		this.length = length;
-	}
+
+    public DigitalVideoDisc(String title, String category, String director, float cost) {
+        super();
+        this.title = title;
+        this.category = category;
+        this.director = director;
+        this.cost = cost;
+    }
 
 
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
+    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+        super();
+        this.title = title;
+        this.category = category;
+        this.director = director;
+        this.length = length;
+        this.cost = cost;
+    }
 
 
-	public String getTitle() {
-		return title;
-	}
-	public String getCategory() {
-		return category;
-	}
-	public String getDirector() {
-		return director;
-	}
-	public int getLength() {
-		return length;
-	}
-	public float getCost() {
-		return cost;
-	}
 
-	// Additional getter for the "id" attribute
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
+
+
+    public String getTitle() {
+        return title;
+    }
+    public String getCategory() {
+        return category;
+    }
+    public String getDirector() {
+        return director;
+    }
+    public int getLength() {
+        return length;
+    }
+    public float getCost() {
+        return cost;
+    }
+
+    // Additional getter for the "id" attribute
     public int getId() {
         return id;
     }
 
-	// Helper method to update class attribute and assign the appropriate value for "id"
+    // Helper method to update class attribute and assign the appropriate value for "id"
     private void updateDiscCountAndId() {
         nbDigitalVideoDiscs++;
         id = nbDigitalVideoDiscs;
     }
-	
-	// ham in ra thong tin dia
-	public String toString() {
+
+    // New method to check if the title matches a given pattern
+    public boolean isMatch(String pattern) {
+        // Use the contains method to check if the title contains the specified pattern
+        return title.toLowerCase().contains(pattern.toLowerCase());
+    }
+
+    // ham in ra thong tin dia
+    public String toString() {
         return "Title: " + title + ", Cost: $" + cost;
     }
 
-	// // Test method for part 5 of this lab
-	
-     public static void main(String[] args) {
-         // Create instances of DigitalVideoDisc to test the new attributes
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("Title 1");
-        System.out.println("DVD ID: " + dvd1.getId());
+    // // Test method for part 5 of this lab
 
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Title 2");
-       System.out.println("DVD ID: " + dvd2.getId());
-        
-        // Print the total number of digital video discs created
-        System.out.println("Total DVDs created: " + nbDigitalVideoDiscs);
-    }
+    // public static void main(String[] args) {
+    //     // Create instances of DigitalVideoDisc to test the new attributes
+    //     DigitalVideoDisc dvd1 = new DigitalVideoDisc("Title 1");
+    //     System.out.println("DVD ID: " + dvd1.getId());
+
+    //     DigitalVideoDisc dvd2 = new DigitalVideoDisc("Title 2");
+    //     System.out.println("DVD ID: " + dvd2.getId());
+
+    //     // Print the total number of digital video discs created
+    //     System.out.println("Total DVDs created: " + nbDigitalVideoDiscs);
+    // }
 }
