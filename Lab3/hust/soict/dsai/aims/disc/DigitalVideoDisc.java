@@ -1,4 +1,4 @@
-package Lab3;
+package hust.soict.dsai.aims.disc;
 
 
 public class DigitalVideoDisc {
@@ -115,16 +115,4 @@ public class DigitalVideoDisc {
         return "ID: " + id + ", Title: " + title + ", Cost: $" + cost;
     }
 
-
-    // public static void main(String[] args) {
-    //     // Create instances of DigitalVideoDisc to test the new attributes
-    //     DigitalVideoDisc dvd1 = new DigitalVideoDisc("Title 1");
-    //     System.out.println("DVD ID: " + dvd1.getId());
-
-    //     DigitalVideoDisc dvd2 = new DigitalVideoDisc("Title 2");
-    //     System.out.println("DVD ID: " + dvd2.getId());
-
-    //     // Print the total number of digital video discs created
-    //     System.out.println("Total DVDs created: " + nbDigitalVideoDiscs);
-    // }
 }
