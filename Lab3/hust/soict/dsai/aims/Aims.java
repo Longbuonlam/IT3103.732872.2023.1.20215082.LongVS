@@ -1,29 +1,28 @@
-package Lab3;
+package hust.soict.dsai.aims;
 
-import Lab2.Cart;
+import hust.soict.dsai.aims.cart.Cart;
 import Lab2.DigitalVideoDisc;
 
 public class Aims {
-    public Aims() {
-    }
-
     public static void main(String[] args) {
-        // tao doi tuong gio hang
-        Lab2.Cart anOrder = new Cart();
+        // tạo giỏ hàng
+        Cart anOrder = new Cart();
 
-        //tao cac dia moi va them vao cart
-        Lab2.DigitalVideoDisc dvd1 = new Lab2.DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95F);
+        // tạo các đĩa mới và thêm vào giỏ hàng
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
         anOrder.addDigitalVideoDisc(dvd1);
 
-        Lab2.DigitalVideoDisc dvd2 = new Lab2.DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95F);
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
         anOrder.addDigitalVideoDisc(dvd2);
 
-        Lab2.DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99F);
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
         anOrder.addDigitalVideoDisc(dvd3);
-        anOrder.removeDigitalVideoDisc(dvd1);
-        //In tong so tien
+
+        // in ra tổng số tiền trong giỏ hàng
         System.out.println("Total cost is: ");
         System.out.println(anOrder.totalCost());
+
         System.out.println(anOrder.toString());
+
     }
 }

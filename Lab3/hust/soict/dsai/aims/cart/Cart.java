@@ -1,4 +1,6 @@
-package Lab3;
+package hust.soict.dsai.aims.cart;
+
+import Lab2.DigitalVideoDisc;
 
 public class Cart {
     //Vo Son Long - 20215082
