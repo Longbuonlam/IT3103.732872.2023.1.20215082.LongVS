@@ -1,0 +1,8 @@
+Q:The Aims class must be updated to handle any exceptions generated when the play() methods are called. 
+What happens when you don’t update for them to catch?
+
+A:Trong Java, khi một phương thức được khai báo ném một ngoại lệ kiểm tra (checked exception), mã gọi (hoặc phương 
+thức gọi) phải xử lý ngoại lệ đó bằng cách sử dụng khối try-catch hoặc chuyển tiếp ngoại lệ bằng cách khai báo nó 
+trong mệnh đề throws. Nếu bạn không xử lý hoặc chuyển tiếp ngoại lệ kiểm tra, mã sẽ không biên dịch được.
+Nếu bạn không bao gồm khối try-catch hoặc không khai báo ngoại lệ trong mệnh đề throws của phương thức main, trình 
+biên dịch sẽ tạo ra một lỗi, và chương trình của bạn sẽ không biên dịch được.
